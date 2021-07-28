@@ -1,0 +1,12 @@
+.menu-left{
+    width: 240px;
+}
+
+.menu-left-button{
+    margin-bottom: 16px;
+    padding: 16px;
+    font-family: "Chewy";
+    font-size: 24px;
+    border-radius: 15px;
+    cursor: pointer;
+}

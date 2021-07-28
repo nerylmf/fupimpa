@@ -1,9 +1,9 @@
 import './App.css';
-import { PaginaInicial } from './components/pages/PaginaInicial/PaginaInicial';
+import { Home } from './components/pages/Home/Home';
 
 function App() {
   return (
-    <PaginaInicial></PaginaInicial>
+    <Home></Home>
   );
 }
 

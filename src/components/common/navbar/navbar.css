@@ -1,0 +1,19 @@
+.navbar{
+    height: 36px;
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+}
+.navbar-container-right{
+    margin-left: auto;
+}
+
+.navbar-container-right nav{
+    display: flex;
+}
+.navbar-button a{
+    text-decoration: none;
+    margin-left: 36px;
+    font-family: "Chewy";
+    font-size: 24px;
+}

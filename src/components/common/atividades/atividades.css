@@ -1,0 +1,34 @@
+.container-atividades{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 35px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.img-atv{
+    width: 200px;
+    height: 120px;
+    border-radius: 15px;
+}
+
+.card-title{
+    font-family: "Chewy";
+    font-size: 24px;
+}
+
+.card-desc{
+    font-family: "Tajawal"; 
+    line-height: 1;
+}
+
+.card-atividade{
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.card-text{
+    margin-top: 5px;
+}

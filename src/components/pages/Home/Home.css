@@ -1,0 +1,10 @@
+.background-home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-home{
+    display: flex;
+    padding: 0px 100px;
+}
