@@ -1,0 +1,57 @@
+.background-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-login{
+    width: 420px;
+    height: 438px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.txt-login{
+    font-family: "Chewy";
+    font-size: 28px;
+}
+.input-usuario, .input-senha, .botao-entrar{
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.botao-entrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Chewy";
+    font-size: 24px;
+    cursor: pointer;    
+}
+.botao-entrar:hover{
+    background-color: #ec5261cc;
+}
+.sub-opcoes{
+    display: flex;
+}
+
+.check{
+    margin: 18px 7px 14px 7px;
+   
+}
+.lembrar{
+    padding: 12px 10px 12px 0px;
+}
+.esqueceu-senha{
+    padding: 12px 0px;
+    margin-left: auto;
+}
