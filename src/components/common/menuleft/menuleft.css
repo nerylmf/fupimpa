@@ -10,3 +10,10 @@
     border-radius: 15px;
     cursor: pointer;
 }
+.menu-left-button .active{
+    color: rgba(56, 51, 63, 0.3);
+
+}
+.menu-left-button:hover{
+    background-color: #f7e8ea96;;
+}
