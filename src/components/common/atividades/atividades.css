@@ -28,7 +28,80 @@
     width: 200px;
     cursor: pointer;
 }
+.card-atividade:hover{
+    /*background-color: #f7921e5d;*/
+    background-color: #38333f38;
+    border-radius: 20px;
+}
 
 .card-text{
     margin-top: 5px;
+}
+
+/*atividade X*/
+.atividadeX{
+    margin-left: 80px;
+    padding-left: 20px;
+    display: flex;
+}
+/*Descrição da atividade X*/
+.descX, .desc-instrucao, .title-instrucao{
+    font-family: "Tajawal"; 
+    line-height: 1.2;
+    font-size: 15px;
+    font-weight:200;
+    margin-right: 20px;
+}
+.title-instrucao{
+    font-weight: 600;
+}
+.desc-instrucao{
+    padding-top: 15px;
+}
+.lista-top{
+    padding-left:25px;
+}
+/*Referências*/
+.card-ref{
+    width: 105%;
+    height: 200px;
+    border-radius: 20px;
+    margin-right: 11%;
+    
+}
+.title-pequeno{
+    font-family: "Chewy";
+    font-size: 20px;
+    line-height: 31px;
+    padding: 10px;
+}
+.lista-ref{
+    font-size: 13px;
+    font-family: "Oxygen Mono";
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+/*editor*/
+.editor{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.editor-cod{
+    height:290px;
+    width: 39vw;
+    border-radius: 20px ;
+}
+.console{
+    background-color:rgba(113, 110, 114, 0.747);
+    height:290px;
+    width: 14.5vw;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.arredondar{
+    height:290px;
+    width: 14px;
+    border-radius: 20px 0px 0px 20px;
 }
