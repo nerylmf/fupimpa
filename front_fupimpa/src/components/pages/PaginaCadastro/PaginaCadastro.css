@@ -1,0 +1,83 @@
+.txt-bemVindo{
+    font-family: "Chewy";
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+.background-login {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-login{
+    width: 420px;
+    height: 438px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.txt-login{
+    font-family: "Chewy";
+    font-size: 28px;
+}
+.input, .botao-cadastrar{
+    width: 350px;
+    height: 50px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 8px;
+}
+.input:focus{
+    border: 1px solid #ec5261cc ;
+}
+.botao-cadastrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Chewy";
+    font-size: 24px;
+    cursor: pointer;    
+    margin-top:30px;
+}
+.botao-cadastrar:hover{
+    background-color: #ec5261cc;
+}
+.sub-opcoes{
+    display: flex;
+}
+
+.check{
+    margin: 18px 7px 14px 7px;
+   
+}
+.lembrar{
+    padding: 12px 10px 12px 0px;
+}
+.esqueceu-senha{
+    padding: 12px 0px;
+    margin-left: auto;
+}
+.login{
+    text-align: center;
+    /*margin-top: 30px;*/
+    font-family: "Tajawal";
+    cursor: pointer;
+}
+.link-login{
+    text-decoration: none;
+}
+.link-login:hover{
+    color: #ec5261cc;
+    border-bottom: 1.5px solid ;
+
+}
