@@ -55,3 +55,13 @@
     padding: 12px 0px;
     margin-left: auto;
 }
+.cadastro{
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Tajawal";
+    cursor: pointer;
+}
+.link-cadastro:hover{
+    color: #F7901E ;
+    border-bottom: 1.5px solid ;
+}

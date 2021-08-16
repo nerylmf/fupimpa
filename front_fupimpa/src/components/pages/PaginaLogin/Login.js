@@ -24,7 +24,10 @@ export function Login() {
                             to="/">
                             Entrar
                     </NavLink>
-                   
+                    
+                    <div className="cadastro branco"> 
+                       <span>Vem ser Fupimpa!<a className="link-cadastro"> Cadastre-se</a></span>
+                    </div>
                 </form>
 
             </div>
