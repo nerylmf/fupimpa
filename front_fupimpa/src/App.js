@@ -5,6 +5,7 @@ import { Home } from './components/pages/Home/Home';
 import { PaginaAtividadeX } from './components/pages/PaginaAtividade/PaginaAtividade';
 import { Cadastro } from './components/pages/PaginaCadastro/PaginaCadastro';
 import { EscolherUser } from './components/pages/PaginaEscolhaUsuario/PaginaEscolhaUsuario';
+import { Forum, Turma } from './components/pages/PaginaTurma/Turma';
 import { Login } from './components/pages/PaginaLogin/Login';
 import history from './history';
 
@@ -31,7 +32,10 @@ function App() {
         <Route path="/cadastroAluno"
         component={Cadastro}>
         </Route>
-       
+
+        <Route path="/turma"
+           component={Turma}>
+        </Route>
 
         
     </Router>

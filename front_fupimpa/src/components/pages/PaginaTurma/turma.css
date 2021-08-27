@@ -1,0 +1,136 @@
+
+.background-turma{
+    min-height: 100vh;   
+}
+.turmas{
+    margin: 0px 100px;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+/* .conteiner-turmas{
+    padding: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+} */
+.coluna{
+    flex-wrap: wrap;
+    justify-content: center;  
+    flex-direction: column;
+}
+
+.conteiner-cardsTurma{
+    padding: 5px 20px 10px 20px;
+}
+
+.accordion-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-turma{
+    width:27vw; 
+    height: 90px;
+    background-color: #38333f1c;
+    border-radius: 20px;
+    padding: 9px; 
+    display: flex;
+    align-items: center;   
+    cursor: pointer; 
+    transition: background-color 0.6s ease;
+}
+.card-turma:hover{
+    background-color: #96CF8D;
+    /* background-color: #38333f1c; */
+}
+.ativo {
+    background-color: #96CF8D;
+    border-radius: 20px 20px 0px 0px ;
+}
+
+.img-perfil{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.infor-turma{
+    font-family: "Tajawal";
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    margin-left: 9px;
+}
+.botao-accordion{
+    width: 50px;
+    margin-left: auto;
+    cursor: pointer;
+}
+.card-accordion{
+    border-radius: 0px 0px 20px 20px ;
+    align-items: center;
+    overflow: hidden;
+    transition: max-height 0.6s ease;
+}
+.form-turma{
+    display: flex;
+    flex-direction: column;
+    width: 28.318vw;
+}
+.chave{
+    width: 25vw ;
+    height: 40px;
+    background-color: #38333f1c;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    margin: 5px 20px;
+    padding-left: 8px;
+}
+.entrar-turma{
+    width: 27% ;
+    height: 40px;
+    background-color: #38333f1c;
+    border-radius: 20px;
+    margin: 5px 20px;
+    margin-left: auto;
+    font-family:"Chewy";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;  
+
+}
+.entrar-turma:hover{
+    background-color:#38333f67 ;
+}
+.chave:focus{
+    border: 1px solid #38333f73  ;
+}
+
+
+/* Estilo icone */
+.accordion-icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
+
+
+
+
+
+
+
+
