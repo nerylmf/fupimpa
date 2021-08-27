@@ -41,7 +41,7 @@ export function MenuRight() {
 
     return (
         <div className="background-exp-real back-verde">
-
+            <div className="myProgress back-branco">  <div className="myBar" ></div> </div>
             <CardExpectativa 
                 title="Expectativa"                
                 expectativa={expectativa}
