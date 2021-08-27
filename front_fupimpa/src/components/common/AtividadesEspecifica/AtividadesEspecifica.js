@@ -1,6 +1,8 @@
 import '../colors/colors.css';
 import { CodeEditor } from '../Editor/Editor';
-import './atividades.css'
+import './AtividadeEspecifica.css'
+import '../atividades/atividades.css'
+import vector from './Vector.svg';
 
 export function AtividadesEspecifica() {
     return (
@@ -77,9 +79,20 @@ function Editor() {
         <div className="editor" >
             <div className="arredondar back-branco"></div>
             <div className="editor-cod back-branco">
+                <div className="btnAD ">
+                    <button  className="btn-aumentar back-branco preto">A-</button>
+                    <button className="btn-diminuir back-branco preto">A+</button>
+                </div>
                 <CodeEditor></CodeEditor>
+                <div className="botao-executar ">             
+                    <img src={vector} alt="Botao executar" className="vector-executar" ></img>
+                </div>
             </div>
-            <div className="console"><span className="title-pequeno branco">Console</span></div>
+            <div className="console">
+                <span className="title-pequeno branco">Console  </span>
+                <span className="seta branco">&gt;&gt;  </span>
+
+            </div>
 
         </div>
     )

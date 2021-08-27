@@ -1,0 +1,116 @@
+/*atividade X*/
+.atividadeX{
+    margin-left: 80px;
+    padding-left: 20px;
+    display: flex;
+}
+/*Descrição da atividade X*/
+.descX, .desc-instrucao, .title-instrucao{
+    font-family: "Tajawal"; 
+    line-height: 1.2;
+    font-size: 15px;
+    font-weight:200;
+    margin-right: 20px;
+}
+.title-instrucao{
+    font-weight: 600;
+}
+.desc-instrucao{
+    padding-top: 10px; /*15px*/
+}
+.lista-top{
+    padding-left:25px;
+}
+/*Referências*/
+.card-ref{
+    width: 120%;
+    height: 200px;
+    border-radius: 20px;
+    margin-right: 7.8%;
+    
+}
+.title-pequeno{
+    font-family: "Chewy";
+    font-size: 20px;
+    line-height: 31px;
+    padding: 10px;
+}
+.lista-ref{
+    font-size: 13px;
+    font-family: "Oxygen Mono";
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+/*editor*/
+.editor{
+    margin-top: 15px; /*20px*/
+    margin-bottom: 20px;
+    margin-left:11% ;/*100px80px*/
+    display: flex;
+    justify-content: center;
+}
+.editor-cod{
+    height:290px;
+    width: 38vw;/*39vw*/
+    border-radius: 20px ;
+   
+}
+.console{
+    background-color:rgba(177, 165, 176, 0.747);
+    height:290px;
+    width:23.5% ; /*14.5vw;*/
+    border-radius: 0px 20px 20px 0px;
+    margin-right:7.8% ; /*9px*/
+    display: flex;
+    flex-direction: column;
+}
+.seta{
+    font-family: "Tajawal";
+    font-size: 14px;
+    padding: 0px 10px;
+}
+
+.arredondar{
+    height:290px;
+    width: 14px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.botao-executar{
+    position: relative;
+    bottom:20%; /*20%60px*/
+    left: 88% ;  /*84% 445px*/
+  }
+  .vector-executar{
+    width: 45px;
+  }
+  .btnAD{
+      position: absolute;
+      top:54%; /*71%20%60px*/
+      right: 55% ;  /*84% 445px*/
+      z-index:1;
+     
+    
+    
+
+}
+  .btn-aumentar,.btn-diminuir{
+      border: none;
+      font-family: "Chewy";
+      font-size: 15px;
+      padding: 0px 7px; 
+      cursor: pointer;
+
+
+  }
+  @media screen and (max-width: 1125px) {
+    .btnAD{
+        top:62%; /*71%20%60px*/
+    }
+  }
+  @media screen and (max-width: 1083px) {
+    .btnAD{
+        top:66%; /*71%20%60px*/
+    }
+  }
