@@ -7,6 +7,7 @@ export function MenuLeft(){
             <MenuLeftButton colorBack="laranja" label="Algorítmo"></MenuLeftButton>
             <MenuLeftButton colorBack="vermelho" label="Expressões"></MenuLeftButton>
             <MenuLeftButton colorBack="verde" label="Funções"></MenuLeftButton>
+            <MenuLeftButton colorBack="verde" label="Controle de fluxo"></MenuLeftButton>
 
         </div>
     );
