@@ -2,7 +2,7 @@ import { MenuRight } from "../../common/menuright/MenuRight";
 import { NavBar } from "../../common/navbar/NavBar";
 import '../../common/colors/colors.css'
 import './PaginaAtividade.css'
-import { AtividadesEspecifica } from "../../common/atividades/AtividadeEspecifica";
+import { AtividadesEspecifica } from "../../common/AtividadesEspecifica/AtividadesEspecifica";
 
 export function PaginaAtividadeX() {
 
