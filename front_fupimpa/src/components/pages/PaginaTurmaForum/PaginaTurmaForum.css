@@ -1,0 +1,118 @@
+/*participantes*/
+.background-turmaForum{
+    min-height: 100vh;   
+}
+.container-pf{
+    display: flex;
+}
+.container-participantes{
+    margin: 0px 40px 0px 100px;
+    width: 24vw;
+    min-height: 85vh; 
+    border-radius: 20px;
+    /* padding: 20px; */
+    padding-top: 35px;
+
+}
+.PA{
+    margin: 20px;
+
+}
+
+.container-prof{
+    margin: 20px 0px;
+}
+
+.title{
+    font-family: "Chewy";
+    font-size: 35px;
+}
+.title-f{
+    margin-left: 8px;
+}
+.title-pa{
+    font-family: "Tajawal";
+    font-weight: 600;
+    font-size: 15px;
+    
+}
+.prof,.alunos{
+    display: flex;
+    align-items: center;
+}
+.prof:hover,.alunos:hover{
+    background-color: #38333f21;
+    border-radius: 15px;
+}
+
+.img-perfil-turma{
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/*forum*/
+.container-forum{
+    margin: 0px 100px 0px 0px;
+    width: 58vw;
+    min-height: 85vh; 
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 35px;
+
+}
+
+.cab-forum{
+    display: flex;
+    /* width: 30%; */
+    
+}
+.botao-perguntar{
+    font-family: "Chewy";
+    font-size: 20px;
+    border-radius: 20px;
+    /* width: 10%;
+    height: 40px;*/
+    margin-left: auto;
+    padding: 8px; 
+}
+.container-pergunta{
+    background-color: #38333f2c ;
+    border-radius: 20px;
+    padding: 14px;
+    margin: 30px 8px 8px 8px;
+    font-family: "Tajawal";
+}
+.title-forum{
+    font-weight: bold;
+    font-size: 16.5px;
+    line-height: 1.5;
+}
+.desc-forum{
+    font-size: 15px;
+    line-height: 1;
+    margin-top: 10px;
+}
+.botoes-forum{
+    width: 26%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+}
+.botao-curtir{
+    margin: 0px 25px;
+    cursor: pointer; 
+}
+.botao-comentarios{
+    cursor: pointer;
+}
+
+.btn-verMais{
+    font-family: "Chewy";
+    font-size: 17px;
+    border-radius: 20px;
+    padding: 4px; 
+    cursor:pointer;
+}

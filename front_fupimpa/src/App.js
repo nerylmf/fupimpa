@@ -8,6 +8,7 @@ import { EscolherUser } from './components/pages/PaginaEscolhaUsuario/PaginaEsco
 import { Forum, Turma } from './components/pages/PaginaTurma/Turma';
 import { Login } from './components/pages/PaginaLogin/Login';
 import history from './history';
+import { PaginaTurmaForum } from './components/pages/PaginaTurmaForum/PaginaTurmaForum';
 
 function App() {
   return (
@@ -36,6 +37,11 @@ function App() {
         <Route path="/turma"
            component={Turma}>
         </Route>
+
+        <Route path="/turmaForum"
+           component={PaginaTurmaForum}>
+        </Route>
+
 
         
     </Router>
