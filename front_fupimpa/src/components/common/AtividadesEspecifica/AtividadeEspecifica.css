@@ -87,8 +87,8 @@
   }
   .btnAD{
       position: absolute;
-      top:54%; /*71%20%60px*/
-      right: 55% ;  /*84% 445px*/
+      top:335px; /* 54%    71%20%60px*/
+      right:730px  ;  /*55%    84% 445px*/
       z-index:1;
      
     

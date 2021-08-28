@@ -79,10 +79,10 @@ function Editor() {
         <div className="editor" >
             <div className="arredondar back-branco"></div>
             <div className="editor-cod back-branco">
-                <div className="btnAD ">
+                {/* <div className="btnAD ">
                     <button  className="btn-aumentar back-branco preto">A-</button>
                     <button className="btn-diminuir back-branco preto">A+</button>
-                </div>
+                </div> */}
                 <CodeEditor></CodeEditor>
                 <div className="botao-executar ">             
                     <img src={vector} alt="Botao executar" className="vector-executar" ></img>
