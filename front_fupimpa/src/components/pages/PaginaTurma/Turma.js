@@ -4,6 +4,7 @@ import '../../common/colors/colors.css'
 import accordion from './icon-accordion.svg';
 import React, { useState, useRef } from 'react';
 import IconAccordion from "./iconAccordion";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -72,7 +73,13 @@ function CardTurma(props) {
                     <div>
                         <form className="form-turma">
                             <input className="chave" type="text" name="campo-chave" placeholder="Insira a chave da turma"></input>
-                            <a className="entrar-turma preto">Entrar</a>
+                            
+                            <NavLink
+                                exact
+                                className="entrar-turma preto"
+                                to="/turmaForum">
+                                Entrar
+                            </NavLink>
                         </form>
 
                     </div>
