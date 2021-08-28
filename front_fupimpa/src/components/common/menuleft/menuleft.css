@@ -1,7 +1,13 @@
 .menu-left{
     width: 24%; /*240px*/
+    display: flex;
+    flex-direction: column;
+    
 }
-
+.btn{
+    text-decoration: none;
+  
+}
 .menu-left-button{
     margin-bottom: 16px; 
     padding: 18px;/*16px*/
@@ -9,11 +15,30 @@
     font-size: 24px;
     border-radius: 15px;
     cursor: pointer;
-}
-.menu-left-button .active{
     color: rgba(56, 51, 63, 0.3);
+    text-decoration: none;
+    
+
+
+}
+
+.btn .active{
+    color: #38333F;
+    /* color: rgba(56, 51, 63, 0.3); */
 
 }
 .menu-left-button:hover{
     background-color: #f7e8ea96;;
 }
+
+.active{
+    color: #38333F;
+    /* color: rgba(56, 51, 63, 0.3); */
+}
+/* 
+.menu-left-button:hover{
+    background-color: #f7e8ea96;;
+} */
+/* .ativo-button{
+    color: #38333F;
+} */
