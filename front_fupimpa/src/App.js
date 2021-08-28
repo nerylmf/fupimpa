@@ -9,6 +9,9 @@ import { Forum, Turma } from './components/pages/PaginaTurma/Turma';
 import { Login } from './components/pages/PaginaLogin/Login';
 import history from './history';
 import { PaginaTurmaForum } from './components/pages/PaginaTurmaForum/PaginaTurmaForum';
+import { Modulo2 } from './components/common/atividades/modulos/Modulo2';
+import { Modulo3 } from './components/common/atividades/modulos/Modulo3';
+import { Modulo4 } from './components/common/atividades/modulos/Modulo4';
 
 function App() {
   return (
@@ -41,6 +44,20 @@ function App() {
         <Route path="/turmaForum"
            component={PaginaTurmaForum}>
         </Route>
+
+        <Route path="/modulo2"
+           component={Modulo2}>
+        </Route>
+
+        <Route path="/modulo3"
+           component={Modulo3}>
+        </Route>
+
+        <Route path="/modulo4"
+           component={Modulo4}>
+        </Route>
+
+       
 
 
         
