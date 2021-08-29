@@ -13,10 +13,11 @@ export function NavBar() {
                 <nav>
                     <div className="navbar-button">
                         <NavLink
-                            // exact
+                            exact
                             className="button branco"
                             to="/modulo"
-                            to="/">
+                            // to="/"
+                            >
                             módulos
                         </NavLink>
                     </div>
