@@ -12,57 +12,60 @@ import { PaginaTurmaForum } from './components/pages/PaginaTurmaForum/PaginaTurm
 import { Modulo2 } from './components/common/atividades/modulos/Modulo2';
 import { Modulo3 } from './components/common/atividades/modulos/Modulo3';
 import { Modulo4 } from './components/common/atividades/modulos/Modulo4';
+import { MenuLeft } from './components/common/menuleft/MenuLeft';
 
 function App() {
   return (
- 
+
     <Router history={history}>
-        <Route path="/login">
-            <Login></Login>
-        </Route>
-       
-        <Route exact path="/">
-            <Home></Home>
-        </Route>
+      <Route path="/login">
+        <Login></Login>
+      </Route>
 
-        <Route path="/Atividade"
-           component={PaginaAtividadeX}>
-        </Route>
 
-        <Route path="/cadastro"
+      <Route exact path="/">
+        <Home></Home>
+      </Route>
+
+      <Route path="/Atividade"
+        component={PaginaAtividadeX}>
+      </Route>
+
+      <Route path="/cadastro"
         component={EscolherUser}>
-        </Route>
+      </Route>
 
-        <Route path="/cadastroAluno"
+      <Route path="/cadastroAluno"
         component={Cadastro}>
-        </Route>
+      </Route>
 
-        <Route path="/turma"
-           component={Turma}>
-        </Route>
+      <Route path="/turma"
+        component={Turma}>
+      </Route>
 
-        <Route path="/turmaForum"
-           component={PaginaTurmaForum}>
-        </Route>
+      <Route path="/turmaForum"
+        component={PaginaTurmaForum}>
+      </Route>
 
-        <Route path="/modulo2"
-           component={Modulo2}>
-        </Route>
-
-        <Route path="/modulo3"
-           component={Modulo3}>
-        </Route>
-
-        <Route path="/modulo4"
-           component={Modulo4}>
-        </Route>
-
-       
+      <Route exact path="/modulo"> 
+        <Home></Home>
+      </Route>
 
 
-        
+      <Route path="/modulo/2"
+        component={Modulo2}>
+      </Route>
+
+      <Route path="/modulo/3"
+        component={Modulo3}>
+      </Route>
+
+      <Route path="/modulo/4"
+        component={Modulo4}>
+      </Route>
+
     </Router>
-    
+
   );
 }
 
