@@ -7,11 +7,19 @@ import '../../../pages/Home/Home.css';
 import filtro from '../../../pages/Home/filtro.svg';
 
 
-export function AtividadesModulo4(){
-    return(
+export function AtividadesModulo4() {
+    return (
         <div className="container-atividades preto back-branco">
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <CardAtividade colorBack="pretoClaro" title="Modulo 4" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>            
 
-            
+
         </div>
     );
 }
@@ -32,7 +40,7 @@ export function Modulo4() {
                         <a className="link-filtro branco" href="">Corrigidas</a>
                         <a className="link-filtro branco" href="">Iniciadas</a>
                     </div>
-                    <img src={filtro} className="filtro-dropdown" alt="Botao filtrar"  ></img>
+                    <img src={filtro} className="filtro-dropdown" alt="Botao filtrar" ></img>
 
 
                 </div>
