@@ -33,8 +33,25 @@
         padding: 9px;
     }
 }
-@media (max-width: 575.98px) {
-    
+@media (max-width: 677.98px) {
+    .menu-left-button {
+        padding: 9px;
+    }
+}
+
+@media (max-width: 675.98px) {
+    .menu-left {
+        width: 24%; /*240px*/
+        display: inline;
+        margin-left: 10px;
+    }
+    .menu-left-button {
+        padding: 1px;
+        margin-right: 10px;
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
 }
 
 /* @media (max-width: 575.98px) { 
