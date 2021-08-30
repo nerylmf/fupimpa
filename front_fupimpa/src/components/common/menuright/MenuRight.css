@@ -1,22 +1,20 @@
-
-.myProgress{
-    margin: 35px 100px 15px  100px;
-    width: 68%;/*279px*/
-    height: 25px;/**/
+.myProgress {
+    margin: 35px 100px 15px 100px;
+    width: 68%; /*279px*/
+    height: 25px; /**/
     border-radius: 20px;
     /* position: relative; */
 }
-.myBar{
-    background-color: #38333F;
+.myBar {
+    background-color: #38333f;
     width: 40%;
     height: 25px;
     border-radius: 20px;
 }
-  
 
 .background-exp-real {
     min-height: 100vh;
-    width: 38vw; 
+    width: 38vw;
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -24,8 +22,8 @@
     align-items: center;
 }
 .card-resultado {
-    width:68% ; /*297px*/
-    height:50% ; /*240px    203*/
+    width: 68%; /*297px*/
+    height: 50%; /*240px    203*/
     border-radius: 20px;
     margin: 20px;
 }
@@ -33,4 +31,34 @@
     font-size: 20px;
     padding: 10px;
     font-family: "Chewy";
+}
+
+@media (max-width: 767.98px) {
+    .background-exp-real {
+        width: 100vw;
+        /* margin-left: auto; */
+    }
+    .myProgress {
+        display: none;
+    }
+
+    .card-resultado {
+        width: 41%; /*297px*/
+        height: 250px; /*240px    203*/
+    }
+}
+@media (max-width: 575.98px) {
+    .card-resultado {
+        width: 56%; /*297px*/
+        height: 261px; /*240px    203*/
+    }
+}
+@media (max-width: 375.98px) {
+    .background-exp-real {
+        width: 112vw;
+    }
+    .card-resultado {
+        width: 76%; /*297px*/
+        height: 261px; /*240px    203*/
+    }
 }
