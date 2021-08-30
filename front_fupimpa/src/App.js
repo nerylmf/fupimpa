@@ -13,6 +13,9 @@ import { Modulo2 } from './components/common/atividades/modulos/Modulo2';
 import { Modulo3 } from './components/common/atividades/modulos/Modulo3';
 import { Modulo4 } from './components/common/atividades/modulos/Modulo4';
 import { MenuLeft } from './components/common/menuleft/MenuLeft';
+import { Burguer } from './components/common/menuleft/Burguer';
+import { Galinha } from './components/common/Galinha/Galinha';
+import { Modulo1 } from './components/common/atividades/modulos/Modulo1';
 
 function App() {
   return (
@@ -47,8 +50,10 @@ function App() {
         component={PaginaTurmaForum}>
       </Route>
 
-      <Route exact path="/modulo"> 
-        <Home></Home>
+      <Route exact path="/modulo"
+         component={Modulo1}> 
+        {/* <Home></Home> */}
+        
       </Route>
 
 
@@ -62,6 +67,12 @@ function App() {
 
       <Route path="/modulo/4"
         component={Modulo4}>
+      </Route>
+
+
+
+      <Route path="/teste"
+        component={Galinha}>
       </Route>
 
     </Router>
