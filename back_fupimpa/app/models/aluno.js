@@ -7,9 +7,9 @@ module.exports = function(){
             required: true
         },
         matricula:{
-            type: "Integer",
+            type: "String",
             required: true
-        },
+        }, 
         email:{
             type: "String",
             required: true

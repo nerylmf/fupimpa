@@ -5,10 +5,12 @@ import { Controlled as CodeMirror } from 'react-codemirror2';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/edit/closebrackets';
+import { useContext } from 'react/cjs/react.development';
+import { AtividadeContext } from '../../pages/PaginaAtividade/PaginaAtividade';
 
 
 export function CodeEditor() {
-  const [code, setCode] = React.useState('// Bem-vindo ao Fupimpa!');
+  const {code, setCode} = useContext(AtividadeContext);
 
   return (
     <CodeMirror
@@ -21,6 +23,7 @@ export function CodeEditor() {
       }}
       onBeforeChange={(editor, data, value) => {
         setCode(value);
+        console.log(code);
 
       }}
       onChange={(editor, data, value) => { }}

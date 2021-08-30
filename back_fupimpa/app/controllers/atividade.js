@@ -15,11 +15,16 @@ module.exports.listarAtividades = function(req, res){
 module.exports.inserirAtividade = function(req, res){
     //let usuario = req.body;
 
+   
+
     let atividade = {
-        nome: req.body.nome,
-        email: req.body.email,
-        senha: bcrypt.hashSync(req.body.senha, 10)
-    }    
+        titulo: req.body.titulo,
+        modulo: req.body.modulo,
+        descricao: req.body.descricao,
+        referencias: req.body.referencias,
+        resposta: req.body.resposta,
+    }
+
     let promise = Atividade.create(atividade);
 
     promise.then(function(atividade){
@@ -44,7 +49,14 @@ module.exports.removerAtividade = function(req, res){
     let id = req.params.id;
     let token = req.headers.token;
     let payload = jwt.decode(token);
-    let id_professor_logado = payload.id;
+
+    let promise = Atividade.findByIdAndDelete(id).exec();
+    promise.then(function(usuario){
+        res.status(200).json(view.render(usuario));
+    }).catch(function(error){
+        res.status(400).json({mensagem: "sua requisição deu ruim", error});
+    });
+    /* //let id_professor_logado = payload.id;
     if(id == id_professor_logado){
         let promise = Atividade.findByIdAndDelete(id).exec();
         promise.then(function(usuario){
@@ -54,6 +66,24 @@ module.exports.removerAtividade = function(req, res){
         });
     } else{
         res.status(401).json({mensagem: "usuário errado"});
-    }
+    } */
 };
 
+module.exports.buscarAtividadePorModulo = function(req, res){
+
+    let modulo = req.params.modulo;
+    let promise = Atividade.find().exec();  
+     
+
+    promise.then(function(atividades){        
+        let listAtividade = atividades.filter(function (atividade) {
+                return atividade.modulo == modulo;
+            }
+        );
+
+        res.status(200).json(view.renderMany(listAtividade));
+    }).catch(function(error){
+        console.log(error);
+        res.status(500).json({mensagem: "sua requisição deu pau"});
+    });
+};

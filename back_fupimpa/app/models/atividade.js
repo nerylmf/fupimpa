@@ -6,7 +6,15 @@ module.exports = function(){
             type: "String",
             required: true
         },
+        modulo: {
+            type: "String",
+            required: true
+        },
         descricao:{
+            type: "String",
+            required: true
+        },
+        referencias: {
             type: "String",
             required: true
         },

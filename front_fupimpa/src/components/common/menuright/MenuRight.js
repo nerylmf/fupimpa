@@ -1,9 +1,32 @@
 import { useState } from 'react';
+import { useContext } from 'react/cjs/react.development';
 import { Expectativa } from '../../p5/Expectativa';
 import { Realidade } from '../../p5/Realidade';
+import { AtividadeContext } from '../../pages/PaginaAtividade/PaginaAtividade';
 import './MenuRight.css';
 
-export function CardExpectativa(props) {
+export function MenuRight() {
+    
+    
+
+    return (
+        <div className="background-exp-real back-verde">
+            <div className="myProgress back-branco">  <div className="myBar" ></div> </div>
+            <CardExpectativa 
+                title="Expectativa"
+            ></CardExpectativa>
+
+            <CardRealidade 
+                title="Realidade"
+            ></CardRealidade>
+
+            <Comparar></Comparar>
+
+        </div>
+    );
+}
+
+function CardExpectativa(props) {
     return (
 
         <div className="card-resultado back-branco">
@@ -11,68 +34,35 @@ export function CardExpectativa(props) {
                 <span className="resul-title preto">{props.title}</span>
             </div>
             <Expectativa
-                expectativa={props.expectativa}
-                setExpectativa={props.setExpectativa}
             ></Expectativa>
         </div>
     )
 }
 
-export function CardRealidade(props) {
+function CardRealidade(props) {
 
     return (
         <div className="card-resultado back-branco">
             <div className="card-text ">
                 <span className="resul-title preto">{props.title}</span>                
             </div>
-            <Realidade
-                realidade={props.realidade}
-                setRealidade={props.setRealidade}
-            ></Realidade>
+            <Realidade></Realidade>
         </div>
     )
 }
 
 
-export function MenuRight() {
-    const [realidade, setRealidade] = useState(0);
-    const [expectativa, setExpectativa] = useState(0);
-    //console.log(realidade);
-
-    return (
-        <div className="background-exp-real back-verde">
-            <div className="myProgress back-branco">  <div className="myBar" ></div> </div>
-            <CardExpectativa 
-                title="Expectativa"                
-                expectativa={expectativa}
-                setExpectativa={setExpectativa}
-            ></CardExpectativa>
-
-            <CardRealidade 
-                title="Realidade" 
-                realidade={realidade}
-                setRealidade={setRealidade} 
-            ></CardRealidade>
-
-            <Comparar 
-                realidade={realidade}
-                setRealidade={setRealidade}   
-                
-                expectativa={expectativa}
-                setExpectativa={setExpectativa}
-            ></Comparar>
-
-        </div>
-    );
-}
 
 
-export function Comparar(props) {
+
+ function Comparar() {
+
+    
+
     function testar(){
         //props.setExpectativa(props.expectativa + 1);
         //props.setRealidade(props.realidade + 2)
-        console.log(props.realidade); 
-        console.log(props.expectativa);            
+                 
     }
 
     return(
