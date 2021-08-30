@@ -16,6 +16,9 @@ import { MenuLeft } from './components/common/menuleft/MenuLeft';
 import { Burguer } from './components/common/menuleft/Burguer';
 import { Galinha } from './components/common/Galinha/Galinha';
 import { Modulo1 } from './components/common/atividades/modulos/Modulo1';
+import { PaginaFacaPergunta } from './components/pages/PaginaFacaPergunta/PaginaFacaPergunta';
+import { Atv1Modulo4 } from './components/common/AtividadesEspecifica/AtividadesEspecifica';
+import { Atividade1Modulo4 } from './components/pages/PaginaAtividade/Modulo4/atv1';
 
 function App() {
   return (
@@ -71,8 +74,8 @@ function App() {
 
 
 
-      <Route path="/teste"
-        component={Galinha}>
+      <Route path="/perguntar"
+        component={PaginaFacaPergunta}>
       </Route>
 
     </Router>
