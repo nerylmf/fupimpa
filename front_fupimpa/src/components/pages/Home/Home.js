@@ -4,6 +4,7 @@ import { MenuLeft } from '../../common/menuleft/MenuLeft';
 import { NavBar } from '../../common/navbar/NavBar';
 import './Home.css';
 import filtro from './filtro.svg';
+import { Galinha } from '../../common/Galinha/Galinha';
 
 
 export function Home() {
@@ -27,6 +28,10 @@ export function Home() {
 
                 </div>
             </div>
+            <div className="galinha-diva">
+                <Galinha></Galinha>
+            </div>
+            {/* <Galinha></Galinha> */}
         </div>
     );
 }
