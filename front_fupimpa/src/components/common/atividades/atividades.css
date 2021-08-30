@@ -1,42 +1,50 @@
-.container-atividades{
+.container-atividades {
     display: flex;
     flex-wrap: wrap;
     margin-left: 35px;
     width: 100%;
     border-radius: 15px;
     padding: 15px; /*20px*/
-    justify-content: space-around; 
+    justify-content: space-around;
     /* justify-content: center; */
 }
 
-.img-atv{
+.img-atv {
     width: 200px;
     height: 120px;
     border-radius: 15px;
 }
 
-.card-title{
+.card-title {
     font-family: "Chewy";
     font-size: 24px;
 }
 
-.card-desc{
-    font-family: "Tajawal"; 
+.card-desc {
+    font-family: "Tajawal";
     line-height: 1;
 }
 
-.card-atividade{
+.card-atividade {
     padding: 9px; /*10px*/
     width: 200px;
     cursor: pointer;
 }
-.card-atividade:hover{
+.card-atividade:hover {
     /*background-color: #f7921e5d;*/
     background-color: #38333f38;
     border-radius: 20px;
 }
 
-.card-text{
+.card-text {
     margin-top: 5px;
 }
 
+@media (max-width: 675.98px) {
+    .container-atividades {
+        margin-left: 0px;
+        margin-top: 30px;
+       
+        /* justify-content: center; */
+    }
+}

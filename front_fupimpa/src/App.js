@@ -18,6 +18,9 @@ import { useState } from 'react/cjs/react.development';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 const AuthContext = createContext(null);
+import { Burguer } from './components/common/menuleft/Burguer';
+import { Galinha } from './components/common/Galinha/Galinha';
+import { Modulo1 } from './components/common/atividades/modulos/Modulo1';
 
 function App() {
 
@@ -75,9 +78,11 @@ function App() {
           component={PaginaTurmaForum}>
         </Route>
 
-        <Route exact path="/modulo"> 
-          <Home></Home>
-        </Route>
+      <Route exact path="/modulo"
+         component={Modulo1}> 
+        {/* <Home></Home> */}
+        
+      </Route>
 
 
         <Route path="/modulo/2"
@@ -92,7 +97,13 @@ function App() {
           component={Modulo4}>
         </Route>
 
-      </Router>
+
+
+      <Route path="/teste"
+        component={Galinha}>
+      </Route>
+
+    </Router>
 
     </AuthContext.Provider>
   );

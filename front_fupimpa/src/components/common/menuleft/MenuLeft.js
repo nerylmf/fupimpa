@@ -10,7 +10,7 @@ export function MenuLeft() {
             <NavLink
                 exact
                 className=" menu-left-button back-laranja"
-                to="/"
+                // to="/"
                 to="/modulo">
                 Algorítmo
             </NavLink>

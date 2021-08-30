@@ -1,5 +1,5 @@
 .navbar {
-    height: 36px;
+    /* height: 36px; */
     padding: 30px 100px;
     display: flex;
     align-items: center;
@@ -26,4 +26,82 @@
     /*estilo para link ativado*/
     color: #96cf8d;
     border-bottom: 2px solid #96cf8d;
+}
+
+
+/*sair*/
+
+.container-opc-perfil .container-dropdown-perfil{
+    width: 90px;
+    height: 62px;    
+    border-radius: 10px;
+    position: absolute;
+    right: 84px;
+    margin-top: 1px;
+    display: none; 
+}
+
+.container-opc-perfil .container-dropdown-perfil .link-perfil{
+    display: block;
+    text-decoration: none;
+    font-family: "Tajawal";
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    padding: 1px;
+
+}
+
+.container-opc-perfil .container-dropdown-perfil .link-perfil:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+.container-opc-perfil:hover .container-dropdown-perfil {
+    display: block;
+}
+
+
+
+
+/*responsividade*/
+
+@media (max-width: 575.98px) {
+    .navbar {
+        padding: 30px 52px;
+        margin: auto;
+    }
+}
+@media (max-width: 475.98px) {
+    .navbar {
+        display: block;
+        padding: 30px 6px;
+    }
+
+    .logo-img {
+        margin-left: 139px;
+    }
+    .navbar-button a {
+        margin-left: 49px;
+    }
+    .navbar-container-right {
+        margin: auto;
+    }
+}
+
+@media (max-width: 375.98px) {
+    .navbar {
+        display: block;
+        padding: 30px 5px;
+    }
+
+    .logo-img {
+        margin-left: 120px; /*139*/
+    }
+    .navbar-button a {
+        margin-left: 39px; /*49*/
+    }
+    .navbar-container-right {
+        margin: auto;
+    }
 }

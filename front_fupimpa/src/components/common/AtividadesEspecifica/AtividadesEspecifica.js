@@ -58,16 +58,16 @@ function DescAtividade(props) {
 function Referencias(props) {
     return (
         <div className="card-ref back-branco">
-            <div className="card-text">
+            <div className="card-text-ref">
                 <span className="title-pequeno preto">Referências</span>
                 <ul className="lista-ref">
-                    <li>{props.ref1}</li>
-                    <li>{props.ref2}</li>
-                    <li>{props.ref3}</li>
-                    <li>{props.ref4}</li>
-                    <li>{props.ref5}</li>
-                    <li>{props.ref6}</li>
-                    <li>{props.ref7}</li>
+                    <li className="preto">{props.ref1}</li>
+                    <li className="preto">{props.ref2}</li>
+                    <li className="preto" >{props.ref3}</li>
+                    <li className="preto">{props.ref4}</li>
+                    <li className="preto">{props.ref5}</li>
+                    <li className="preto">{props.ref6}</li>
+
                 </ul>
             </div>
         </div>

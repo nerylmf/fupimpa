@@ -8,16 +8,16 @@ export function NavBar() {
 
     return (
         <div className="navbar background-laranja">
-            <img src={logo} alt="Logo Fupimpa" height="36px"></img>
+            <img className="logo-img" src={logo} alt="Logo Fupimpa" height="36px"></img>
             <div className="navbar-container-right">
                 <nav>
                     <div className="navbar-button">
                         <NavLink
-                            exact
+                            // exact
                             className="button branco"
                             to="/modulo"
-                            // to="/"
-                            >
+                        // to="/"
+                        >
                             módulos
                         </NavLink>
                     </div>
@@ -28,24 +28,48 @@ export function NavBar() {
                             turma
                         </NavLink>
                     </div>
-                    <div className="navbar-button">
-                        <NavLink
-                            exact
-                            className="button branco"
-                            to="/perfil">
-                            perfil
-                            {/* <div class="container-dropdown back-preto">
+
+                    <div className='container-opc-perfil'>
+
+                        <div className="navbar-button">
+                            <NavLink
+                                exact
+                                className="button button-perfil branco"
+                                // to="/perfil"
+                                to="">
+                                perfil
+                                {/* <div class="container-dropdown back-preto">
                                 <a className="link-filtro branco" href="">Ana</a>
                                 <a className="link-filtro branco" href="">Sair</a>
                             </div> */}
 
-                        </NavLink>
+                            </NavLink>
+                        </div>
 
+                        <div class="container-dropdown-perfil back-verde">
+                            <a className="link-perfil branco" href="">Nome</a>
+                            <a className="link-perfil branco" href="">Sair</a>
+                        </div>
                     </div>
-
                 </nav>
             </div>
         </div>
     );
 }
 
+
+{/* <div className="navbar-button">
+    <NavLink
+        exact
+        className="button branco"
+        // to="/perfil"
+        to=""
+    >
+        perfil
+        {/* <div class="container-dropdown back-preto">
+            <a className="link-filtro branco" href="">Ana</a>
+            <a className="link-filtro branco" href="">Sair</a>
+        </div> *
+
+    </NavLink>
+</div> */}
