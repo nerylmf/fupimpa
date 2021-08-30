@@ -1,8 +1,12 @@
+import { useForm } from 'react-hook-form'
 import { NavLink } from 'react-router-dom'
 import '../../common/colors/colors.css'
 import './Login.css'
 
 export function Login() {
+
+    const {register, handleSubmit} = useForm();
+
     return (
         
         <div className="background back-verde">
@@ -11,7 +15,7 @@ export function Login() {
                     
                     <label className="label-txt branco" for="usuario">Usuário:</label>
                     <input  className="input back-branco" type="text" name="campo-usuario" ></input>
-                    <label className="label-txt branco" for="passoword">Senha:</label>
+                    <label className="label-txt branco" for="password">Senha:</label>
                     <input className="input back-branco" type="password" name="password"></input>
                     <div className="sub-opcoes"> 
                         <input className="check " type="checkbox" ></input>

@@ -14,7 +14,7 @@ export function Expectativa(props){
 
 		p5.loadPixels();
 		//pixels = p5.pixels;
-		props.setExpectativa(p5.pixels);
+		//props.setExpectativa(p5.pixels);
 
 		p5.noLoop();
 			

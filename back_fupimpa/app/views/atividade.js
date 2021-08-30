@@ -4,7 +4,10 @@ function render(atividade){
     return{
         id: atividade._id,
         titulo: atividade.titulo,
-        descricao: atividade.descricao
+        modulo: atividade.modulo,
+        descricao: atividade.descricao,
+        referencias: atividade.referencias,
+        resposta: atividade.resposta,
     }
 }
 

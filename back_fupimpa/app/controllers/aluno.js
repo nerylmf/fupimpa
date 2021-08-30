@@ -18,6 +18,7 @@ module.exports.inserirAluno = function(req, res){
     let usuario = {
         nome: req.body.nome,
         email: req.body.email,
+        matricula: req.body.matricula,
         senha: bcrypt.hashSync(req.body.senha, 10)
     }    
     let promise = Aluno.create(usuario);
