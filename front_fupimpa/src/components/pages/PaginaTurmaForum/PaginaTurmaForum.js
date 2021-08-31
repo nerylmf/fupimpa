@@ -3,6 +3,7 @@ import './PaginaTurmaForum.css';
 import '../../common/colors/colors.css'
 import balao from './balao.svg';
 import coracao from './coracao.svg';
+import history from "../../../history";
 
 
 function Professor(props) {
@@ -13,7 +14,7 @@ function Professor(props) {
         </div>
     )
 }
-function Alunos(props) { 
+function Alunos(props) {
     let classes = "alunos back-" + props.colorBack;
     return (
         <div className={classes}>
@@ -44,14 +45,18 @@ function PerguntasDoForum(props) {
 
 
 export function PaginaTurmaForum() {
+    function foiclicado() {
+        console.log("Foi clicado!");
+        history.push("/perguntar")
+    }
     return (
         <div className="background-turmaForum back-preto">
             <NavBar></NavBar>
             <div className="container-pf">
                 <div className="container-participantes back-branco">
                     <div className="PA">
-                     <span className="title preto">Participantes</span>
-                   
+                        <span className="title preto">Participantes</span>
+
                         <div className="container-prof">
                             <span className="title-pa preto">PROFESSOR</span>
                             <Professor nomeProf="Carlos Josias Viera da Silva"></Professor>
@@ -66,7 +71,7 @@ export function PaginaTurmaForum() {
                         </div>
                     </div>
                 </div>
-                
+
 
 
 
@@ -74,23 +79,22 @@ export function PaginaTurmaForum() {
                     <div className="cab-forum">
                         <span className="title title-f preto">Fórum</span>
 
-                        <a className="botao-perguntar preto back-laranja"> Faça uma pergunta</a>
+                        <a className="botao-perguntar preto back-laranja" onClick={foiclicado}> Faça uma pergunta</a>
                     </div>
                     <PerguntasDoForum
-                        titleP="Nunc quam nibh tortor quis nisi. Nisl nec fermentum, tristique sit volutpat odio amet. Aliquet nulla
-                        gravida tortor praesent dictumst facilisis ut donec."
-                        descP="Bibendum erat sed lorem turpis vel aliquam dolor tortor. Odio ut tristique eget ac, at. A arcu sem dictum proin. Felis neque fames semper volutpat velit magnis mi. Egestas ut nisi, orci eu in purus integer nibh. Adipiscing cursus elementum aliquet ultrices mattis tincidunt nibh. Aliquam et in aenean quam neque, viverra purus arcu. Porttitor morbi ut proin a tempus. Ut proin aenean amet etiam quam ac, euismod. Convallis erat molestie tellus gravida facilisis malesuada laoreet...">
+                        titleP="Dentro de uma função introduzi este código e por algum motivo não esta a somar."
+                        descP="var total = (currentUser.profile.hp + currentUser.profile.attack + currentUser.profile.luck) / 3; 
+                        a multiplicação funciona perfeitamente com o caracter '*' ">
                     </PerguntasDoForum>
 
                     <PerguntasDoForum
-                        titleP="Ac ipsum blandit convallis ornare metus. Vehicula risus, velit eros magnis tortor."
-                        descP="Purus nibh quam ac tellus consectetur sed amet. Nulla sodales id id tincidunt amet egestas. Ut adipiscing et egestas nullam purus et. Consectetur quisque arcu amet, lectus nulla tristique...">
+                        titleP="Quero adicionar uma tecla no meu código JavaScript no p5.js"
+                        descP="Eu tenho essa duas funções, porém, o meu problema é na moveRacketE(), eu estou fazendo um ping pong, só que eu queria fazer para duas pessoas jogarem, e não eu jogar contra o computador, como eu poderia adicionar a tecla W para subir, e a tecla S para descer na função moveRacketE()?">
                     </PerguntasDoForum>
 
                     <PerguntasDoForum
-                        titleP="Ac cras consectetur commodo nunc amet. Integer diam fringilla massa rhoncus tempor ultrices. In facilisi aenean amet, massa maecenas erat."
-                        descP="Viverra vel eget etiam vivamus lacus nunc blandit mauris dui. Faucibus eget ultrices quisque sed sed. Non congue vulputate diam amet, tortor. Eu faucibus viverra viverra faucibus feugiat. Tortor sit convallis eu odio nisi, non elit.
-                        Nisl a porta pellentesque est lacus quam velit urna donec...">
+                        titleP="Não estou conseguindo resolver a atividade daA Fuga, alguém poderia me ajudar?"
+                        descP="Todas as vezes que eu tento executar a atividade a Galinha não sai do lugar">
                     </PerguntasDoForum>
 
                 </div>
