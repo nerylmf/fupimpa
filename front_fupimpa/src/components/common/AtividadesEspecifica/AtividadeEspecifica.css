@@ -25,9 +25,10 @@
 }
 /*Referências*/
 .card-ref {
-    width: 120%;
+    width: 200px;
     height: 200px;
     border-radius: 20px;
+    margin-left: auto;
     margin-right: 7.8%;
 }
 .card-text-ref {

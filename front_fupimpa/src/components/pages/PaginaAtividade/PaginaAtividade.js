@@ -3,13 +3,20 @@ import { NavBar } from "../../common/navbar/NavBar";
 import '../../common/colors/colors.css'
 import './PaginaAtividade.css'
 import { AtividadesEspecifica } from "../../common/AtividadesEspecifica/AtividadesEspecifica";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { CodeEditor } from "../../common/Editor/Editor";
 import vector from './Vector.svg';
+import history from "../../../history";
+import { useEffect } from "react/cjs/react.development";
+import { getAtividadeById } from "../../../api/auth";
+import { AuthContext } from "../../../App";
 
 export const AtividadeContext = createContext(null);
 
-export function PaginaAtividadeX() {    
+export function PaginaAtividadeX(props) {
+    
+    const [atividade, setAtividade] = useState([]);
+    const auth = useContext(AuthContext);
 
     const [codeExpectativa, setCodeExpectativa] = useState(`
         p5.background(255, 255, 255);        
@@ -28,27 +35,40 @@ export function PaginaAtividadeX() {
         //p5.ellipse(150,150,150,150);
     `);
 
-    const [codeAtual, setCodeAtual] = useState(`
-        p5.background(255, 255, 255); 
-        p5.ellipse(150,150,150,150);
-    `);
-
+    const [codeAtual, setCodeAtual] = useState(
+`
+p5.background(255, 255, 255); 
+p5.ellipse(150,150,150,150);
+`   );
     
+    let idFromURL = window.location.href.split("/")[4];
+    useEffect(() => {
+        getAtividadeById({token: auth.token, id: idFromURL}).then(
+            (response) => {
+                setAtividade(response.data);                
+            }
+        )
+    }, []);
 
     return (
         <AtividadeContext.Provider value={{
             codeExpectativa: codeExpectativa,
             codeRealidade: codeRealidade,
+            setCodeRealidade: setCodeRealidade,
+            setCodeExpectativa: setCodeExpectativa,
             codeAtual: codeAtual,
             setCodeAtual: setCodeAtual,
+            atividade: atividade,
+            setAtividade: setAtividade,
         }}>
+            
             <div className="container-atvX" >
                 <div className="conteiner-nav back-preto">
                     <NavBar ></NavBar>
                 <div>
                 <div className="atividadeX">
-                    <DescAtividade></DescAtividade>
-                    <Referencias></Referencias>
+                    <DescAtividade atividade={atividade}></DescAtividade>
+                    <Referencias atividade={atividade}></Referencias>
                 </div>
             <Editor></Editor>
 
@@ -67,34 +87,49 @@ export function PaginaAtividadeX() {
 function DescAtividade(props) {
     return (
         <div className="conteiner-descricao">
-            <span className="card-title branco">{props.title}</span>
-            <p className="descX branco">{props.desc}</p>
-            <div className="desc-instrucao branco">
-                <span className="title-instrucao branco">{props.titleInstrucao}</span>
-
-                <ul className="lista-top">
-                    <li>{props.topico1}</li>
-                    <li>{props.topico2}</li>
-                    <li>{props.topico3}</li>
-                </ul>
-            </div>
+            <span className="card-title branco">{props.atividade.titulo}</span>
+            <p className="descX branco">{props.atividade.descricao}</p>
+            
         </div>
 
     );
 }
 
-function Referencias(props) {
+function SingleReferencias (props) {
+
+    return(
+        <a href="">{props.referencia}</a>
+    );
+}
+
+function Referencias() {
+
+    let contextAtividade = useContext(AtividadeContext);
+    
+
+    //let listReferencias = props.referencias.split(",");
+    
+    /* let newList = listReferencias.map(
+        (referencia) => {
+            <SingleReferencias
+                referencia={referencia}
+            >                
+            </SingleReferencias>
+        });
+     */
+
     return (
         <div className="card-ref back-branco">
             <div className="card-text-ref">
                 <span className="title-pequeno preto">Referências</span>
                 <ul className="lista-ref">
-                    <li className="preto">{props.ref1}</li>
+                    {/* <li className="preto">{props.ref1}</li>
                     <li className="preto">{props.ref2}</li>
                     <li className="preto" >{props.ref3}</li>
                     <li className="preto">{props.ref4}</li>
                     <li className="preto">{props.ref5}</li>
-                    <li className="preto">{props.ref6}</li>
+                    <li className="preto">{props.ref6}</li> */}
+                    {/* {newList} */}
 
                 </ul>
             </div>
@@ -103,6 +138,11 @@ function Referencias(props) {
 }
 
 function Editor() {
+
+    const runCode = () => {
+        console.log("rodou");
+    }
+
     return (
         <div className="editor" >
             <div className="arredondar back-branco"></div>
@@ -112,7 +152,7 @@ function Editor() {
                     <button className="btn-diminuir back-branco preto">A+</button>
                 </div> */}
                 <CodeEditor></CodeEditor>
-                <div className="botao-executar ">             
+                <div onClick={runCode} className="botao-executar ">             
                     <img src={vector} alt="Botao executar" className="vector-executar" ></img>
                 </div>
             </div>
@@ -125,3 +165,5 @@ function Editor() {
         </div>
     )
 }
+
+

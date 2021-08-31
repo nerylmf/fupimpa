@@ -63,7 +63,8 @@
     }
 }
 
-/* 
-.expectativa span, .realidade span{
-    position: absolute;
-} */
+
+.expectativa , .realidade {
+    border-radius: 20px;
+    overflow: hidden;
+} 

@@ -1,5 +1,9 @@
 /* BASICS */
 
+.CodeMirror * {
+  font-family: monospace;
+}
+
   
   /* PADDING */
   

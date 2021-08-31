@@ -6,9 +6,11 @@ import { Realidade } from '../../p5/Realidade';
 import { AtividadeContext } from '../../pages/PaginaAtividade/PaginaAtividade';
 import './CodeView.css';
 
-export function CodeView() {
+export function CodeView(props) {
 
-    const code = useContext(AtividadeContext);
+    const contextAtividade = useContext(AtividadeContext);
+
+    console.log(contextAtividade);
     
     const width = 300;
     const height = 300;
@@ -19,11 +21,12 @@ export function CodeView() {
     let pixels_corretos = 0;
 
     const setup_expectativa = (p5, canvasParentRef) => {
-        p5.createCanvas(width, height).parent(canvasParentRef);
+        p5.createCanvas(width, height).parent(canvasParentRef);        
         p5.pixelDensity(1);
+
     }
     const draw_expectativa = (p5) => {
-        eval(code.codeExpectativa);
+        eval(contextAtividade.codeExpectativa);
 
         p5.loadPixels();
         pixels_expectativa = p5.pixels;
@@ -35,7 +38,13 @@ export function CodeView() {
         p5.pixelDensity(1);
     }
     const draw_realidade = (p5) => {
-        eval(code.codeRealidade);
+        try{
+            eval(contextAtividade.codeRealidade);
+        }
+        catch (e) {
+
+        }
+        
 
         p5.loadPixels();
         pixels_realidade = p5.pixels;
@@ -72,12 +81,14 @@ export function CodeView() {
             <div className="myProgress back-branco">  
                 <div className="myBar" ></div> 
             </div>
-            <div className="expectativa">
-                <span className="resul-title preto">Expectativa</span>
+
+            <span className="resul-title preto">Expectativa</span>
+            <div className="expectativa">                
                 <Sketch setup={setup_expectativa} draw={draw_expectativa}/>
             </div>
+            <span className="resul-title preto">Realidade</span>
             <div className="realidade">
-                <span className="resul-title preto">Realidade</span>
+                
                 <Sketch setup={setup_realidade} draw={draw_realidade}/>
             </div>
             <button onClick={comparar}>

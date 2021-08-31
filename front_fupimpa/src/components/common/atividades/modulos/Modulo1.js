@@ -1,7 +1,7 @@
 
 import { MenuLeft } from '../../menuleft/MenuLeft';
 import { NavBar } from '../../navbar/NavBar';
-import { CardAtividade } from '../Atividades';
+import { SingleAtividade } from '../Atividades';
 import '../../colors/colors.css';
 import '../atividades.css'
 import '../../../pages/Home/Home.css';
@@ -11,18 +11,18 @@ import filtro from '../../../pages/Home/filtro.svg';
 export function Atividades(){
     return(
         <div className="container-atividades preto back-branco">
-            <CardAtividade colorBack="laranja" title="Galinha no tapa" desc="Dona Lourdes é cozinheira do Restaurante..."></CardAtividade>
-            <CardAtividade colorBack="laranja" title="Abduzido" desc="Abdu é um alienigena que esta de passeio..."></CardAtividade>
-            <CardAtividade colorBack="laranja" title="A Fuga" desc="Fupimpinha entrou em desespero e começou a correr.."></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
-            <CardAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></CardAtividade>
+            <SingleAtividade colorBack="laranja" title="Galinha no tapa" desc="Dona Lourdes é cozinheira do Restaurante..."></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="Abduzido" desc="Abdu é um alienigena que esta de passeio..."></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="A Fuga" desc="Fupimpinha entrou em desespero e começou a correr.."></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
+            <SingleAtividade colorBack="laranja" title="OPA" desc="asd fasd asdfa sdfasdfas dba ajahb dvjh"></SingleAtividade>
             
         </div>
     );

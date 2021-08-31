@@ -21,7 +21,7 @@ export function NavBar() {
                         <NavLink
                             // exact
                             className="button branco"
-                            to="/modulo"
+                            to="/modulos"
                         // to="/"
                         >
                             módulos

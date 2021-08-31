@@ -5,9 +5,22 @@ import { NavBar } from '../../common/navbar/NavBar';
 import './Home.css';
 import filtro from './filtro.svg';
 import { Galinha } from '../../common/Galinha/Galinha';
+import { useEffect, useState } from 'react/cjs/react.development';
+import { getAtividades } from '../../../api/auth';
 
 
 export function Home() {
+
+    const [atividades, setAtividades] = useState(null);
+
+    
+    getAtividades().then((response) => {
+        console.log(response);
+    }).catch((error) => {
+        console.log(error);
+    });
+    //console.log(listAtividade);
+
     return (
         <div className="background-home branco back-preto">
 

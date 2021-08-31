@@ -13,16 +13,20 @@ export function CodeEditor() {
   const code = useContext(AtividadeContext);
 
   return (
-    <CodeMirror
+    <CodeMirror 
+      mode='javascript'
+      theme='monokai'
       value={code.codeAtual}
-      options={{
-        mode: 'javascript',
+      options={{   
+        
+        smartIndent: true,
         lineNumbers: true,
         autoCloseBrackets: true,
 
       }}
       onBeforeChange={(editor, data, value) => {
         code.setCodeAtual(value);
+        code.setCodeRealidade(value);
       }}
       onChange={(editor, data, value) => { }}
     />
