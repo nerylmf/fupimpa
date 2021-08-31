@@ -13,7 +13,7 @@ export function Cadastro() {
 
     const {register, handleSubmit} = useForm();
     const submeter = (usuario) => {
-        console.log(usuario);
+        //console.log(usuario);
         cadastrar(usuario).then((response) => {
             console.log(response);
         }).catch((error) => {
@@ -36,9 +36,9 @@ export function Cadastro() {
                         {...register("nome")}
                     ></input>
                     
-                    <label className="label-txt branco" for="matricula">Matricula:</label>
-                    <input  className="input-cad back-branco" type="text" name="campo-matricula" 
-                        {...register("matricula")}
+                    <label className="label-txt branco" for="email">Email:</label>
+                    <input  className="input-cad back-branco" type="text" name="campo-email" 
+                        {...register("email")}
                     ></input>
                     
                     <label className="label-txt branco" for="passoword">Senha:</label>

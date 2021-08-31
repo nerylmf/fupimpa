@@ -10,6 +10,16 @@
     align-items: center; 
     flex-direction: column;
 }
+
+.card-cadastro{
+    width:380px ;/*420px*/
+    height:400px ;/*438px*/
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .input-cad {
     width: 97%;
     height: 45px;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router } from 'react-router-dom';
+import { Route, Router } from 'react-router-dom';
 import './App.css';
 import { CodeEditor } from './components/common/Editor/Editor';
 import { Home } from './components/pages/Home/Home';
@@ -16,11 +16,12 @@ import { MenuLeft } from './components/common/menuleft/MenuLeft';
 import { createContext } from 'react';
 import { useState } from 'react/cjs/react.development';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
-
-const AuthContext = createContext(null);
-import { Burguer } from './components/common/menuleft/Burguer';
 import { Galinha } from './components/common/Galinha/Galinha';
 import { Modulo1 } from './components/common/atividades/modulos/Modulo1';
+
+export const AuthContext = createContext(null);
+//import { Burguer } from './components/common/menuleft/Burguer';
+
 
 function App() {
 
@@ -35,8 +36,9 @@ function App() {
     setAuth(newAuth);
     localStorage.setItem("token", newAuth.token);
     localStorage.setItem("nome", newAuth.nome);
-  } 
-
+  }
+  
+ 
   return (
 
     <AuthContext.Provider value={{
@@ -46,20 +48,28 @@ function App() {
 
       <Router history={history}>
         <Route path="/login">
-          <Login></Login>
+          {
+            auth.token === null || auth.token === "null"?
+            <Login></Login> : 
+            <Redirect to="/"></Redirect>
+          } 
+          
         </Route>
 
 
         <Route exact path="/">
           {
-            auth.token == null || auth.token == "null"?
-            <Redirect to="/login"></Redirect> :
-            <Home></Home>
+            auth.token === null || auth.token === "null"?
+            <Redirect to="/login"></Redirect> : 
+              <Home></Home>
           }          
         </Route>
 
-        <Route path="/Atividade"
-          component={PaginaAtividadeX}>
+        <Route path="/Atividade"> {
+            auth.token === null || auth.token === "null"?
+            <Redirect to="/login"></Redirect> : 
+              <PaginaAtividadeX></PaginaAtividadeX>
+          }
         </Route>
 
         <Route path="/cadastro"
@@ -70,32 +80,44 @@ function App() {
           component={Cadastro}>
         </Route>
 
-        <Route path="/turma"
-          component={Turma}>
+        <Route path="/turma">
+          {
+            auth.token === null || auth.token === "null"?
+            <Redirect to="/login"></Redirect> :
+            <Turma></Turma>
+          }
         </Route>
 
         <Route path="/turmaForum"
           component={PaginaTurmaForum}>
+            {
+              auth.token === null || auth.token === "null"?
+              <Redirect to="/login"></Redirect> :
+              <PaginaTurmaForum></PaginaTurmaForum>
+            }
         </Route>
 
-      <Route exact path="/modulo"
-         component={Modulo1}> 
-        {/* <Home></Home> */}
-        
+      <Route exact path="/modulo">
+           {
+             auth.token === null || auth.token == "null"?
+             <Redirect to="/login"></Redirect> :
+             <Modulo1></Modulo1>
+           } 
+        {/* <Home></Home> */}        
       </Route>
 
 
-        <Route path="/modulo/2"
-          component={Modulo2}>
-        </Route>
+      {/* <Route path="/modulo/2"
+        component={Modulo2}>
+      </Route>
 
-        <Route path="/modulo/3"
-          component={Modulo3}>
-        </Route>
+      <Route path="/modulo/3"
+        component={Modulo3}>
+      </Route>
 
-        <Route path="/modulo/4"
-          component={Modulo4}>
-        </Route>
+      <Route path="/modulo/4"
+        component={Modulo4}>
+      </Route> */}
 
 
 

@@ -13,21 +13,32 @@ module.exports.listarAlunos = function(req, res){
 };
 
 module.exports.inserirAluno = function(req, res){
-    //let usuario = req.body;
+    //let usuario = req.body;    
 
-    let usuario = {
+    let aluno = {
         nome: req.body.nome,
         email: req.body.email,
-        matricula: req.body.matricula,
         senha: bcrypt.hashSync(req.body.senha, 10)
     }    
-    let promise = Aluno.create(usuario);
 
+    
+
+    /* if(Aluno.exists({nome: aluno.nome})) {
+        console.log(aluno);
+        console.log("exist"); 
+    } else {
+        console.log("NAO EXISTE");
+    } */
+    let promise = Aluno.create(aluno);
     promise.then(function(aluno){
+        //console.log(aluno);
         res.status(201).json(view.render(aluno));
     }).catch(function(error){
         res.status(400).json({mensagem: "sua requisição deu ruim"});
     });
+
+    
+    
 };
 
 module.exports.buscarAlunoPorId = function(req, res){

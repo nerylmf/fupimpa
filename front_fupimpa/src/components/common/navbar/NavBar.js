@@ -1,11 +1,17 @@
 import { Link, NavLink } from 'react-router-dom';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
+import { useContext } from 'react/cjs/react.development';
+import { AuthContext } from '../../../App';
 import '../../common/colors/colors.css';
 import logo from '../../common/logo.svg';
 import './navbar.css';
 
 
+
 export function NavBar() {
 
+    const auth = useContext(AuthContext);
+    
     return (
         <div className="navbar background-laranja">
             <img className="logo-img" src={logo} alt="Logo Fupimpa" height="36px"></img>
@@ -48,7 +54,11 @@ export function NavBar() {
 
                         <div class="container-dropdown-perfil back-verde">
                             <a className="link-perfil branco" href="">Nome</a>
-                            <a className="link-perfil branco" href="">Sair</a>
+                            <a onClick={() =>{
+                                auth.setAuth({token: null, nome: null});
+                                <Redirect to="/"></Redirect>
+                            }
+                            }className="link-perfil branco" href="">Sair</a>
                         </div>
                     </div>
                 </nav>

@@ -4,7 +4,6 @@ function render(aluno){
     return{
         id: aluno._id,
         nome: aluno.nome,
-        matricula: aluno.matricula,
         email: aluno.email
     }
 }

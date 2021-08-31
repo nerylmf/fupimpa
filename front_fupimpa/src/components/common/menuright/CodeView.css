@@ -1,14 +1,14 @@
 .myProgress {
     margin: 35px 100px 15px 100px;
     width: 68%; /*279px*/
-    height: 25px; /**/
+    height: 15px; /**/
     border-radius: 20px;
     /* position: relative; */
 }
 .myBar {
     background-color: #38333f;
     width: 40%;
-    height: 25px;
+    height: 15px;
     border-radius: 20px;
 }
 
@@ -62,3 +62,8 @@
         height: 261px; /*240px    203*/
     }
 }
+
+/* 
+.expectativa span, .realidade span{
+    position: absolute;
+} */

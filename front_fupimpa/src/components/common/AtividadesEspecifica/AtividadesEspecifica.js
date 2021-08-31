@@ -2,7 +2,7 @@ import '../colors/colors.css';
 import { CodeEditor } from '../Editor/Editor';
 import './AtividadeEspecifica.css'
 import '../atividades/atividades.css'
-import vector from './Vector.svg';
+//import vector from './Vector.svg';
 
 export function AtividadesEspecifica() {
     return (
@@ -84,9 +84,9 @@ function Editor() {
                     <button className="btn-diminuir back-branco preto">A+</button>
                 </div> */}
                 <CodeEditor></CodeEditor>
-                <div className="botao-executar ">             
+                {/* <div className="botao-executar ">             
                     <img src={vector} alt="Botao executar" className="vector-executar" ></img>
-                </div>
+                </div> */}
             </div>
             <div className="console">
                 <span className="title-pequeno branco">Console  </span>

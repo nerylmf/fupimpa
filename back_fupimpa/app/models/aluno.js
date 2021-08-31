@@ -6,10 +6,6 @@ module.exports = function(){
             type: "String",
             required: true
         },
-        matricula:{
-            type: "String",
-            required: true
-        }, 
         email:{
             type: "String",
             required: true

@@ -10,11 +10,11 @@ import { AtividadeContext } from '../../pages/PaginaAtividade/PaginaAtividade';
 
 
 export function CodeEditor() {
-  const {code, setCode} = useContext(AtividadeContext);
+  const code = useContext(AtividadeContext);
 
   return (
     <CodeMirror
-      value={code}
+      value={code.codeAtual}
       options={{
         mode: 'javascript',
         lineNumbers: true,
@@ -22,9 +22,7 @@ export function CodeEditor() {
 
       }}
       onBeforeChange={(editor, data, value) => {
-        setCode(value);
-        console.log(code);
-
+        code.setCodeAtual(value);
       }}
       onChange={(editor, data, value) => { }}
     />

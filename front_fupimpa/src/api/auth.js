@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export function cadastrar(data){
+    //console.log(data);
     return(
+        
         axios({
             method:"POST",
             url:"http://localhost:8393/api/aluno",
@@ -11,10 +13,11 @@ export function cadastrar(data){
 }
 
 export function signin(data){
+    console.log(data);
     return(
         axios({
             method:"POST",
-            url:"http://localhost:8393/api/usuarios/signin",
+            url:"http://localhost:8393/api/aluno/signin",
             data: data,
         })
     );
