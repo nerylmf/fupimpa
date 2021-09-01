@@ -1,0 +1,44 @@
+
+.background-escolherUser {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-txt{
+    width: 55vw;
+}
+.txt{
+    font-family: "Tajawal";
+    font-size: 20px;
+    padding: 20px; 
+    text-align: center;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botoes{
+    display: flex;  
+}
+.botao{
+    margin: 20px;
+    border-radius: 20px;
+  
+    text-decoration: none; 
+    font-family: "Chewy";
+    font-size: 24px;
+    cursor: pointer; 
+   /* width: 230px; 229 e 87 ; 230 60*/
+    height: 60px;
+    padding: 0px 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.botao:hover{
+    background-color: #EC5261;  
+    outline: #e61f33; 
+}
+
+

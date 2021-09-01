@@ -1,0 +1,38 @@
+.navegador{
+    background-color: silver;
+}
+.navegador .cab-nav{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+}
+.navegador .cab-nav  button{
+    margin-left: auto;
+    padding: 9px 20px;
+    outline: none;
+    border: 2px solid rebeccapurple;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.navegador .menu-retratil{
+    height: 0;
+     overflow: hidden;
+}
+
+.navegador .menu-retratil a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    /* height: 0px; */
+   
+
+}
+.navegador .menu-retratil.ativo-b{
+    /* padding: 20px; */
+    height: auto;
+
+}
+.navegador .menu-retratil a:hover{
+    background-color: rgb(15, 15, 43);
+}
