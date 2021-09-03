@@ -76,14 +76,13 @@ export function SingleAtividade(props){
                         p5.pixelDensity(1);
                     }}
                     draw = {(p5) => {
-                        p5.background(0,0,0);
                         eval(props.resposta);
                     }}
                     ></Sketch>
             </div>
             <div className="card-text">
                 <span className="card-title preto">{props.titulo}</span>
-                <p className="card-desc preto">{props.descricao}</p>
+                {/* <p className="card-desc preto">{props.descricao}</p> */}
             </div>
         </div>
     );

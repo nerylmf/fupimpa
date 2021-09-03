@@ -42,7 +42,7 @@ export function NavBar() {
                                 exact
                                 className="button button-perfil branco"
                                 // to="/perfil"
-                                to="">
+                                to="/perfil">
                                 perfil
                                 {/* <div class="container-dropdown back-preto">
                                 <a className="link-filtro branco" href="">Ana</a>

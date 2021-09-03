@@ -21,7 +21,7 @@ export function Login() {
             auth.setAuth({
                 token: response.data.token, nome: response.data.nome
             });
-            history.push("/modulo");
+            history.push("/modulos");
         }).catch((error) => {
             console.log(error);
         }); 

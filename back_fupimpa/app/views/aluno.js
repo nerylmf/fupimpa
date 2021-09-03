@@ -1,4 +1,4 @@
-//const alunos = require("../routes/aluno");
+const alunos = require("../routes/aluno");
 
 function render(aluno){
     return{

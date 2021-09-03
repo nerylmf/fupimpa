@@ -8,37 +8,47 @@ module.exports.listarAlunos = function(req, res){
     promise.then(function(alunos){
         res.status(200).json(view.renderMany(alunos));
     }).catch(function(error){
-        res.status(500).json({mensagem: "sua requisição deu pau"});
+        res.status(400).json({mensagem: "sua requisição deu pau"});
     });
 };
 
 module.exports.inserirAluno = function(req, res){
     //let usuario = req.body;    
+    if(req.body.email == ""){
+        res.status(400).json({mensagem: "Email está vazio"});
+        return;
+    }
+    if(req.body.nome == ""){
+        res.status(400).json({mensagem: "Nome está vazio"});
+        return;
+    }
+    if(req.body.senha == ""){
+        res.status(400).json({mensagem: "Senha está vazio"});
+        return;
+    }
 
-    let aluno = {
+    let novoAluno = {
         nome: req.body.nome,
         email: req.body.email,
         senha: bcrypt.hashSync(req.body.senha, 10)
-    }    
-
+    }        
     
-
-    /* if(Aluno.exists({nome: aluno.nome})) {
-        console.log(aluno);
-        console.log("exist"); 
-    } else {
-        console.log("NAO EXISTE");
-    } */
-    let promise = Aluno.create(aluno);
-    promise.then(function(aluno){
-        //console.log(aluno);
-        res.status(201).json(view.render(aluno));
-    }).catch(function(error){
-        res.status(400).json({mensagem: "sua requisição deu ruim"});
-    });
-
-    
-    
+    const existe = Aluno.find({email: novoAluno.email}).exec();
+    existe.then((aluno) => {
+        if (aluno.length == 0){
+            let promise = Aluno.create(novoAluno);
+            promise.then(function(aluno){
+                //console.log(aluno);
+                res.status(201).json(view.render(aluno));
+            }).catch(function(error){
+                res.status(400).json({mensagem: "sua requisição deu ruim"});
+            });
+        }else{
+            res.status(400).json({mensagem: "Email já cadastrado"});
+        }
+    }).catch((error) => {
+        res.status(400).json({mensagem: "Bad Request"});
+    });    
 };
 
 module.exports.buscarAlunoPorId = function(req, res){
@@ -47,7 +57,7 @@ module.exports.buscarAlunoPorId = function(req, res){
     promise.then(function(aluno){
         res.status(200).json(view.render(aluno));
     }).catch(function(error){
-        res.status(404).json({mensagem: "sua requisição deu ruim", error});
+        res.status(404).json({mensagem: "Aluno nao encontrado", error});
     });
 };
 
@@ -57,15 +67,15 @@ module.exports.removerAluno = function(req, res){
     let token = req.headers.token;
     let payload = jwt.decode(token);
     let id_usuario_logado = payload.id;
-    if(id == id_usuario_logado){
+    /* if(id == id_usuario_logado){ */
         let promise = Aluno.findByIdAndDelete(id).exec();
         promise.then(function(aluno){
             res.status(200).json(view.render(aluno));
         }).catch(function(error){
-            res.status(400).json({mensagem: "sua requisição deu ruim", error});
+            res.status(400).json({mensagem: "Aluno nao encontrado", error});
         });
-    } else{
+    /* } else{
         res.status(401).json({mensagem: "usuário errado"});
-    }
+    } */
 };
 

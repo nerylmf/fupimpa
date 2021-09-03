@@ -45,3 +45,15 @@ export function getAtividadeById({token: token, id: id}){
         })
     );
 }
+
+export function getAtividadePorModulo({token: token, modulo: modulo}){
+    return(
+        axios({
+            method:"GET", 
+            url:"http://localhost:8393/api/atividade/modulo/" + modulo,
+            headers: {
+                "token": token,
+            },
+        })
+    );
+}

@@ -66,13 +66,14 @@ function App() {
           {
             auth.token === null || auth.token === "null"?
             <Redirect to="/login"></Redirect> : 
-              <PaginaModulos></PaginaModulos>
-          }          
+            <Redirect to="/modulos"></Redirect>
+          }   
+          <Redirect to="/modulos"></Redirect>       
         </Route>
 
         <Route path="/Atividade"> {
-            auth.token === null || auth.token === "null"?
-            <Redirect to="/login"></Redirect> : 
+            /* auth.token === null || auth.token === "null"?
+            <Redirect to="/login"></Redirect> : */ 
               <PaginaAtividadeX></PaginaAtividadeX>
           }
         </Route>

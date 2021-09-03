@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Sketch from 'react-p5';
-import { useContext } from 'react/cjs/react.development';
+import { useContext, useEffect } from 'react/cjs/react.development';
 import { Expectativa } from '../../p5/Expectativa';
 import { Realidade } from '../../p5/Realidade';
 import { AtividadeContext } from '../../pages/PaginaAtividade/PaginaAtividade';
@@ -9,11 +9,12 @@ import './CodeView.css';
 export function CodeView(props) {
 
     const contextAtividade = useContext(AtividadeContext);
+    const [ acertoAtual, setAcertoAtual ] = useState(0);    
 
-    console.log(contextAtividade);
+    //console.log(contextAtividade);
     
     const width = 300;
-    const height = 300;
+    const height = 250;
 
     let pixels_expectativa = [];
     let pixels_realidade = [];
@@ -30,7 +31,6 @@ export function CodeView(props) {
 
         p5.loadPixels();
         pixels_expectativa = p5.pixels;
-        //p5.noLoop();
     }
 
     const setup_realidade = (p5, canvasParentRef) => {
@@ -42,9 +42,7 @@ export function CodeView(props) {
             eval(contextAtividade.codeRealidade);
         }
         catch (e) {
-
-        }
-        
+        }     
 
         p5.loadPixels();
         pixels_realidade = p5.pixels;
@@ -68,6 +66,7 @@ export function CodeView(props) {
         
         let acerto = pixels_corretos / qtdPixels * 100;
         console.log("Acerto: " + acerto + "%");     
+        setAcertoAtual(acerto);
         
         
         /* console.log(pixels_corretos);
@@ -77,9 +76,10 @@ export function CodeView(props) {
     }
 
     return (
-        <div className="background-exp-real back-verde">
-            <div className="myProgress back-branco">  
-                <div className="myBar" ></div> 
+        <div className="background-exp-real back-verde" >
+            <span className="resul-title preto">{acertoAtual.toFixed()}%</span>
+            <div className="myProgress back-branco">
+                <div className="myBar" style={{width: "" + acertoAtual + "%"}}></div> 
             </div>
 
             <span className="resul-title preto">Expectativa</span>
@@ -91,8 +91,8 @@ export function CodeView(props) {
                 
                 <Sketch setup={setup_realidade} draw={draw_realidade}/>
             </div>
-            <button onClick={comparar}>
-                COMPARAR
+            <button className="button-comparar back-preto resul-title branco" onClick={comparar}>
+                Comparar
             </button>
             {/* <CardExpectativa 
                 title="Expectativa"
@@ -126,7 +126,7 @@ export function CodeView(props) {
 
 
 
-
+/* 
 
 
 function CardExpectativa(props) {
@@ -173,4 +173,4 @@ function CardRealidade(props) {
             Comparar
         </button>
     );
-}
+} */

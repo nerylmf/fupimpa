@@ -18,34 +18,19 @@ export function PaginaAtividadeX(props) {
     const [atividade, setAtividade] = useState([]);
     const auth = useContext(AuthContext);
 
-    const [codeExpectativa, setCodeExpectativa] = useState(`
-        p5.background(255, 255, 255);        
-        p5.noStroke();
+    const [codeExpectativa, setCodeExpectativa] = useState();
 
-        p5.fill(30,200,50);
-        p5.ellipse(50,50,50,50);
-        p5.fill(200,30,50);
-        p5.ellipse(250,250,50,50);
-        p5.fill(30,50,200);
-        p5.ellipse(150,150,50,50);
-    `);
+    const [codeRealidade, setCodeRealidade] = useState();
 
-    const [codeRealidade, setCodeRealidade] = useState(`
-        p5.background(255, 255, 255); 
-        //p5.ellipse(150,150,150,150);
-    `);
-
-    const [codeAtual, setCodeAtual] = useState(
-`
-p5.background(255, 255, 255); 
-p5.ellipse(150,150,150,150);
-`   );
+    const [codeAtual, setCodeAtual] = useState("p5.background(255, 255, 255);");
     
     let idFromURL = window.location.href.split("/")[4];
     useEffect(() => {
         getAtividadeById({token: auth.token, id: idFromURL}).then(
             (response) => {
-                setAtividade(response.data);                
+                setAtividade(response.data);
+                setCodeExpectativa(response.data.resposta);
+                setCodeRealidade("p5.background(255, 255, 255);");               
             }
         )
     }, []);
@@ -65,14 +50,13 @@ p5.ellipse(150,150,150,150);
             <div className="container-atvX" >
                 <div className="conteiner-nav back-preto">
                     <NavBar ></NavBar>
-                <div>
-                <div className="atividadeX">
-                    <DescAtividade atividade={atividade}></DescAtividade>
-                    <Referencias atividade={atividade}></Referencias>
-                </div>
-            <Editor></Editor>
-
-        </div>
+                    <div>
+                        <div className="atividadeX">
+                            <DescAtividade atividade={atividade}></DescAtividade>
+                            <Referencias atividade={atividade}></Referencias>
+                        </div>
+                            <Editor></Editor>
+                    </div>
                 </div>
                 <CodeView></CodeView>
             </div>
@@ -104,7 +88,17 @@ function SingleReferencias (props) {
 
 function Referencias() {
 
-    let contextAtividade = useContext(AtividadeContext);
+    let {atividade} = useContext(AtividadeContext);
+
+    //console.log(atividade);
+
+    const [listRef, setListRef] = useState();
+
+    useEffect(() => {
+        //setListRef();
+    });
+
+    
     
 
     //let listReferencias = props.referencias.split(",");
@@ -152,9 +146,9 @@ function Editor() {
                     <button className="btn-diminuir back-branco preto">A+</button>
                 </div> */}
                 <CodeEditor></CodeEditor>
-                <div onClick={runCode} className="botao-executar ">             
+                {/* <div onClick={runCode} className="botao-executar ">             
                     <img src={vector} alt="Botao executar" className="vector-executar" ></img>
-                </div>
+                </div> */}
             </div>
             <div className="console">
                 <span className="title-pequeno branco">Console  </span>
