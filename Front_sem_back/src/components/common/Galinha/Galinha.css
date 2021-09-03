@@ -1,0 +1,28 @@
+.centrar-pg {
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #f7e8eab2;
+}
+.container-galinha {
+    width:55vw;
+    margin-left: 60px;
+}
+.galinha {
+    width: 82%;/*60%*/
+}
+.botao-fechar{
+    position: absolute;
+    top: 9%; /*54px; */
+    right: 23%; /*277px; */
+    cursor: pointer;
+}
+.x{
+    width: 250%;
+
+}
+
+
+

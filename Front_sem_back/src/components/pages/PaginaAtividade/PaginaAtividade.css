@@ -1,0 +1,33 @@
+.container-atvX{
+    display:flex;
+}
+.conteiner-nav{
+    width: 68vw;
+}
+@media (max-width: 767.98px) {
+    .container-atvX{
+        display:block;
+    }
+    .conteiner-nav{
+        width: 100vw;
+        height: 120vh;
+    }  
+}
+@media (max-width: 575.98px) {
+    .container-atvX{
+        display:block;
+    }
+    .conteiner-nav{
+        width: 100vw;
+        height: 145vh;
+    }
+    
+ }
+
+ @media (max-width: 375.98px) {
+    .conteiner-nav{
+        width: 112vw;
+        height: 159vh;
+
+    }
+ }
